@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziki — Сэндвичи, торты и десерты</title>
+    <link rel="stylesheet" href="ДЛЯ ГЛАВНОЙ.index.css">
+     <link rel="stylesheet" href="Карзина/cart.css">
+</head>
+<body>
+
+    <!-- ШАПКА САЙТА -->
+    <header>
+        <div class="container header-flex">
+            <a href="index.html" class="logo-link">
+                <img src="Ziki-round.png" alt="Ziki Logo" class="header-logo">
+                <span class="logo-text">Ziki</span>
+            </a>
+            <nav class="header-nav">
+                <a href="О НАС .about.html/about.html">О нас</a>
+                <a href="#catalog" class="active-nav">Меню</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+            <div class="cart-btn" onclick="toggleCart()">
+                🛒 Корзина (<span id="cart-count">0</span>)
+            </div>
+        </div>
+    </header>
+
+    <!-- ГЛАВНЫЙ БАННЕР -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Восточный вкус от Ziki</h1>
+            <p class="hero-subtitle">Свежие сэндвичи, изысканные торты и десерты, приготовленные с душой и вниманием к каждой детали.</p>
+            <a href="#catalog" class="hero-btn">Смотреть меню</a>
+        </div>
+    </section>
+
+    <!-- КАТАЛОГ ПРОДУКЦИИ -->
+    <main class="container" id="catalog">
+        <h2 class="section-title">Наша продукция</h2>
+        
+        <div class="catalog-grid">
+            <!-- Товар 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=500&q=80" alt="Сэндвич Классический" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Сэндвич «Классический»</h3>
+                    <p class="product-desc">Свежий сочный сэндвич с нежным куриным филе, сыром и фирменным соусом.</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">180 сом</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Сэндвич «Классический»', 180)">В корзину</button>
+                </div>
+            </div>
+
+            <!-- Товар 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1554471062-e6da5d5a0404?auto=format&fit=crop&w=500&q=80" alt="Сэндвич с тунцом" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Сэндвич с тунцом</h3>
+                    <p class="product-desc">Изысканное сочетание тунца, свежих овощей и зелени на мягком хлебе.</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">210 сом</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Сэндвич с тунцом', 210)">В корзину</button>
+                </div>
+            </div>
+
+            <!-- Товар 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=500&q=80" alt="Трайфл «Шоколадный»" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Трайфл «Шоколадный»</h3>
+                    <p class="product-desc">Нежный десерт в стаканчике с шоколадным бисквитом и крем-чизом.</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">160 сом</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Трайфл «Шоколадный»', 160)">В корзину</button>
+                </div>
+            </div>
+
+            <!-- Товар 4 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=500&q=80" alt="Торт «Восточный вкус»" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Торт «Восточный вкус»</h3>
+                    <p class="product-desc">Фирменный праздничный торт по секретному рецепту нашей кондитерской.</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">1200 сом</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Торт «Восточный вкус»', 1200)">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer id="contacts" class="site-footer">
+        <div class="container">
+            <p>Кондитерская "Ziki" &copy; 2026. Сэндвичи • торты • десерты</p>
+            <p>Телефон / WhatsApp: +996 (707) 03-01-50</p>
+        </div>
+    </footer>
+
+    <script src="Карзина/cart.js"></script>
+</body>
+</html>
